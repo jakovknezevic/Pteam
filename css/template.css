@@ -1,0 +1,20 @@
+body {
+    padding-top: 50px;
+}
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+.navbar {
+    background-color: #3a6b9c;
+}
+.navbar-inverse {
+    background-color: #3a6b9c;
+}
+.navbar-fixed-top {
+    background-color: #3a6b9c;
+}
+
+h1 {
+    font-family: "Tahoma";
+}
