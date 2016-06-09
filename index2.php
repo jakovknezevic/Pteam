@@ -66,7 +66,7 @@
                     echo('<tr>');
                     echo('<td>' . $row['name'] . '</td>');
                     echo('<td>' . $row['id'] . '</td>');
-                    echo('<td>' . '<a href="add.php?gameid=' . $row['id'] .   '?korisnikid=' . $get['korisnikid'] .  '"><img src="img/plus.png"></a>' . '</td>');
+                    echo('<td>' . '<a href="add.php?gameid=' . $row['id'] .   '&korisnikid=' . $get['korisnikid'] .  '"><img src="img/plus.png"></a>' . '</td>');
 
                     echo('</tr>');
                 }
