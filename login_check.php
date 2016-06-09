@@ -21,7 +21,7 @@
         $row = $result->fetch_assoc();
         session_start();
         $_SESSION['id'] = $row['id'];
-        header('Location: index2.php');
+        header('Location: index2.php?korisnikid=' . $row['username'] . ' ');
     } else {
         header('Location: login.php?login=fail');
     }

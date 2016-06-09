@@ -9,7 +9,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        echo($row['id']);
+        echo($row['id'] . " ");
     }
 } else {
     echo "Nema korisnika";
@@ -32,7 +32,7 @@ if ($result->num_rows > 0) {
     <![endif]-->
 </head>
 
-<body>
+<body background="bckgnd.png">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">

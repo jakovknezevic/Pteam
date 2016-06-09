@@ -4,21 +4,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Automobili</title>
+    <title>Steam Library</title>
 </head>
 
 <body>
 <h1>
-    Automobili
+    Steam Library
 </h1>
 
 <p>
     <?php
-    $sql = "INSERT INTO korisnici (gameId) VALUES ('" . $_POST['registracija'] . "', '" . $_POST['ime'] . "')";
+    $sql = "INSERT INTO games (id, korisnikId) VALUES ('" . $_GET['gameid'] . "', '" . $_POST['id'] . "')";
     $result = $conn->query($sql);
 
-    echo('Automobil je unesen!<br>');
-    echo('<a href="index.php">Povratak na prikaz automobila</a>');
+    echo('Igra je unesena!<br>');
+    echo('<a href="index2.php">Povratak na listu igara</a>');
     ?>
 </p>
 </body>

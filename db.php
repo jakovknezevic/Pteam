@@ -1,3 +1,7 @@
+<html>
+<body background="bckgnd.png">
+</body>
+</html>
 <?php
 $servername = "localhost";
 $username = "root";

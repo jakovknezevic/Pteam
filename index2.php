@@ -45,6 +45,10 @@
     </div>
 
     <div>
+
+
+        
+        
         <p>
             <?php
             if (!isset($_SESSION['count'])) {
@@ -52,7 +56,7 @@
             } else {
                 $_SESSION['count']++;
             }
-            $sql = "SELECT name, genre FROM games";
+            $sql = "SELECT DISTINCT(name), id FROM games WHERE name IS NOT NULL";
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 // output data of each row
@@ -61,8 +65,9 @@
                 while($row = $result->fetch_assoc()) {
                     echo('<tr>');
                     echo('<td>' . $row['name'] . '</td>');
-                    echo('<td>' . $row['genre'] . '</td>');
-                    echo('<td>' . '<a href="add.php?id=' . $row['id'] . '"><img src="img/plus.png"></a>' . '</td>');
+                    echo('<td>' . $row['id'] . '</td>');
+                    echo('<td>' . '<a href="add.php?gameid=' . $row['id'] .   '?korisnikid=' . $get['korisnikid'] .  '"><img src="img/plus.png"></a>' . '</td>');
+
                     echo('</tr>');
                 }
                 echo('</table>');
